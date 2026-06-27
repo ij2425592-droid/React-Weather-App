@@ -1,3 +1,4 @@
+import defaultImg from "./assets/default.png";
 import clearImg from "./assets/clear.avif";
 import cloudsImg from "./assets/clouds.avif";
 import rainImg from "./assets/rain.avif";
@@ -55,7 +56,7 @@ export default function App(){
         return thunderstormImg;
 
       default:
-        return cloudsImg;
+        return defaultImg;
     }
   };
 
@@ -65,7 +66,7 @@ export default function App(){
           backgroundImage: `url(${
             weather
               ? getBackgroundImage(weather.weather[0].main)
-              : cloudsImg
+              : defaultImg
           })`,
         }}
       >
